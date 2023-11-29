@@ -6,7 +6,12 @@ from datetime import datetime
 from datetime import timezone
 from github import Github
 from github import Auth
-auth = Auth.Token("access_token")
+
+auth = Auth.Token("ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIFfr3p0mczzY4Xp7Tt8x9KeNGd6yS46uoP6J/4gJa+oU ronaldwang2025@berkeley.edu")
+g = Github(auth=auth)
+
+print(g.get_user().login)
+
 
 
 load_dotenv()
